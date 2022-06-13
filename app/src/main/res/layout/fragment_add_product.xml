@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/ap_white"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/primary_bold"
+        android:text="Add Product"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/ap_brown"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextNameAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/back_edittext"
+            android:fontFamily="@font/primary_regular"
+            android:gravity="center_vertical"
+            android:hint="Name..."
+            android:maxLength="28"
+            android:maxLines="1"
+            android:textColor="@color/ap_brown"
+            android:textColorHint="#48595959"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/editTextPriceAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/back_edittext"
+            android:fontFamily="@font/primary_regular"
+            android:gravity="center_vertical"
+            android:hint="Price..."
+            android:inputType="number"
+            android:maxLength="7"
+            android:maxLines="1"
+            android:textColor="@color/ap_brown"
+            android:textColorHint="#48595959"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextUrlAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/back_edittext"
+            android:fontFamily="@font/primary_regular"
+            android:gravity="center_vertical"
+            android:hint="Image Url..."
+            android:inputType="text"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/ap_brown"
+            android:textColorHint="#48595959" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/menuCategoryAddProduct"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            app:boxBackgroundColor="@color/ap_pink_white"
+            app:boxBackgroundMode="filled"
+            android:hint="Category"
+            app:boxCornerRadiusBottomEnd="25dp"
+            app:boxCornerRadiusBottomStart="25dp"
+            app:boxCornerRadiusTopEnd="25dp"
+            app:boxCornerRadiusTopStart="25dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteCategoryAddProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAddAddProduct"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/primary_bold"
+        android:gravity="center"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="@color/ap_brown"
+        android:textSize="18sp"
+        app:cornerRadius="25dp"
+        app:rippleColor="#338A8A8A"
+        app:strokeColor="@color/ap_brown"
+        app:strokeWidth="2sp" />
+
+</RelativeLayout>
